@@ -1,0 +1,4 @@
+FROM nginx:latest
+ADD https://raw.githubusercontent.com/PriyankaSahu1/DockerPractise/master/index.html  /usr/share/nginx/html/index.html
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+RUN chmod +r /usr/share/nginx/html/index.html
